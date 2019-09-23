@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t udemydockerid/docker-study -f Dockerfile.dev .
+
+scala:
+  - docker run udemydockerid/docker-study
