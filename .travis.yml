@@ -6,4 +6,4 @@ before_install:
   - docker build -t udemydockerid/docker-study -f Dockerfile.dev .
 
 scala:
-  - docker run udemydockerid/docker-study
+  - docker run -e CI=true udemydockerid/docker-study
