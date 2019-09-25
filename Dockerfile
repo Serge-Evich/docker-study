@@ -10,7 +10,5 @@ WORKDIR '/app'
 
 COPY . .
 RUN mvn clean test package
-
-FROM nginx
 EXPOSE 80
-COPY --from=builder /app/target/docker-study-1.0-SNAPSHOT.jar /usr/share/nginx/jar
+CMD ["java", "-jar", "./target/docker-study-1.0-SNAPSHOT.jar"]
