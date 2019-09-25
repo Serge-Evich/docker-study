@@ -10,5 +10,5 @@ WORKDIR '/app'
 
 COPY . .
 RUN mvn clean test package
-EXPOSE 80
+EXPOSE 8080
 CMD ["java", "-jar", "./target/docker-study-1.0-SNAPSHOT.jar"]

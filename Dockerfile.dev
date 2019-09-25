@@ -12,5 +12,3 @@ WORKDIR '/app'
 COPY . .
 
 CMD ["mvn", "clean", "test", "package"]
-
-# CMD ["java", "-jar", "./target/docker-study-1.0-SNAPSHOT.jar"]
