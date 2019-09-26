@@ -7,7 +7,8 @@ ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
 ENV PATH="$JAVA_HOME/bin:${PATH}"
 
 WORKDIR '/app'
-
+COPY ./pom.xml ./
+RUN mvn install dependency:copy-dependencies
 COPY . .
 RUN mvn clean test package
 EXPOSE 8080
